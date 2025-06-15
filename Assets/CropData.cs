@@ -5,5 +5,7 @@ public class CropData : ScriptableObject
 {
     public string cropName;
     public GameObject cropPrefab;
-    public float growTime = 5f;
+    public float growTime = 1f;
+    public Sprite fullGrownSprite;
+    public Sprite midGrowSprite;
 }
