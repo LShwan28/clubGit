@@ -2956,7 +2956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076524795}
-  - component: {fileID: 2076524794}
+  - component: {fileID: 2076524796}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2964,24 +2964,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2076524794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076524793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c48f5bc6f3b7f344aba13d01472da55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  farmTilemap: {fileID: 1677936192}
-  untiledTile: {fileID: 11400000, guid: 080e461ea149d4e4798557939a5e71af, type: 2}
-  tilledTile: {fileID: 11400000, guid: 594fb7e4e51b99f4e825e87e3c1c41ba, type: 2}
-  wateredTile: {fileID: 11400000, guid: ac767f28c86ddfd4a8b4f1be1f923adc, type: 2}
-  cropToPlant: {fileID: 11400000, guid: 12148667fca574448a16fa3e6f5fd1a3, type: 2}
-  cropPrefab: {fileID: 6953850984369233656, guid: a6cc06fddfbd3a54fbe1403f0028d4ca, type: 3}
 --- !u!4 &2076524795
 Transform:
   m_ObjectHideFlags: 0
@@ -2997,6 +2979,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076524796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076524793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef3ffb3154e8a7478696b3f98bfd378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  farmTilemap: {fileID: 1677936192}
+  untiledTile: {fileID: 11400000, guid: 2a4f951c191a4d44a9a6a003010d7518, type: 2}
+  tilledTile: {fileID: 11400000, guid: 10638bd7ad8e5b444906492367c67925, type: 2}
+  wateredTile: {fileID: 11400000, guid: d283ce1feaac5bb44bde2c1c44413dc7, type: 2}
+  cropToPlant: {fileID: 11400000, guid: 0128b1395bd449f429d66ad2fe77151a, type: 2}
+  cropPrefab: {fileID: 6953850984369233656, guid: a6cc06fddfbd3a54fbe1403f0028d4ca, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
