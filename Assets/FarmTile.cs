@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 
-public class FarmManager : MonoBehaviour
+public class FarmTile : MonoBehaviour
 {
     private enum TileState { Untilled, Tilled, Planted, Watered }
 
@@ -17,7 +17,7 @@ public class FarmManager : MonoBehaviour
     public CropData cropToPlant;
     public GameObject cropPrefab;
 
-    // ³»ºÎ »óÅÂ °ü¸®
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private Dictionary<Vector3Int, TileState> tileStates = new();
     private Dictionary<Vector3Int, GameObject> plantedCrops = new();
 
@@ -44,7 +44,7 @@ public class FarmManager : MonoBehaviour
                     {
                         farmTilemap.SetTile(cellPos, tilledTile);
                         tileStates[cellPos] = TileState.Tilled;
-                        Debug.Log("¹çÀ» °¥¾Ò½À´Ï´Ù.");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½.");
                     }
                     break;
 
@@ -56,10 +56,10 @@ public class FarmManager : MonoBehaviour
 
                         GameObject crop = Instantiate(cropPrefab, farmTilemap.GetCellCenterWorld(cellPos), Quaternion.identity);
                         Crop cropScript = crop.GetComponent<Crop>();
-                        cropScript.SetData(cropToPlant);
+                        cropScript.SetData(cropToPlant, cellPos);
                         plantedCrops[cellPos] = crop;
 
-                        Debug.Log("¾¾¾ÑÀ» ½É¾ú½À´Ï´Ù.");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
                     }
                     break;
 
@@ -71,7 +71,7 @@ public class FarmManager : MonoBehaviour
 
                         Crop crop = plantedCrops[cellPos].GetComponent<Crop>();
                         crop.Water();
-                        Debug.Log("¹°À» ÁÖ¾ú½À´Ï´Ù.");
+                        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
                     }
                     break;
 
@@ -87,7 +87,7 @@ public class FarmManager : MonoBehaviour
 
                             farmTilemap.SetTile(cellPos, tilledTile);
                             tileStates[cellPos] = TileState.Tilled;
-                            Debug.Log("¼öÈ®Çß½À´Ï´Ù.");
+                            Debug.Log("ï¿½ï¿½È®ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
                         }
                     }
                     break;
